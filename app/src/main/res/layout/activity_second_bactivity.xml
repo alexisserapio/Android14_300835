@@ -15,7 +15,7 @@
 
     <Button
         android:id="@+id/btnReturnB"
-        android:text="Return result ActivityB"
+        android:text="Return Result ActivityB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
