@@ -13,22 +13,33 @@
         android:theme="@style/Theme.Android14"
         tools:targetApi="31">
         <activity
+            android:name=".practicas.graphiccomponents.BasicComponentsActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".practicas.graphiccomponents.ConstraintLayoutActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".practicas.graphiccomponents.RelativeLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".practicainicial.SecondBActivity"
             android:exported="false" />
         <activity
             android:name=".practicainicial.FirstBActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".practicainicial.ImplicitIntentBrowserActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".practicainicial.LifeCycleToastActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".practicas.graphiccomponents.LinearLayoutActivity"
             android:exported="false" />

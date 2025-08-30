@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".practicas.graphiccomponents.RelativeLayoutActivity">
+
+    <TextView
+        android:text="Ingresa tus datos"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etUser"
+        android:hint="Ingrese usuario"
+        android:layout_marginHorizontal="20dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_below="@+id/etUser"
+        android:hint="Ingresa contraseña"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:text="Entrar"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Recuperar contraseña"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_alignStart="@+id/btnEnter"
+        android:layout_below="@+id/etPassword"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/btnEnter"
+        android:layout_below="@+id/etPassword"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginEnd="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/btnEnter"
+        android:layout_below="@+id/etPassword"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/btnEnter"
+        android:layout_below="@+id/etPassword"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+
+
+</RelativeLayout>
