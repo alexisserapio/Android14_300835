@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Android14"
         tools:targetApi="31">
         <activity
+            android:name=".practicas.compose.ComposeFormsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicas.graphiccomponents.list.RVDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".practicas.compose.ComposeWelcomeActivity"
             android:exported="false"
             android:theme="@style/Theme.Android14" />
@@ -27,7 +33,7 @@
         </activity>
         <activity
             android:name=".practicas.graphiccomponents.BasicComponentsActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".practicas.graphiccomponents.ConstraintLayoutActivity"
             android:exported="true" />

@@ -1,5 +1,6 @@
 package com.example.android14.practicas.graphiccomponents.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -39,7 +40,12 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         val adapter = AnimalAdapter(data)
         adapter.onItemSelected = {
-            Toast.makeText(this, "Item selected: ${it.name}", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Item selected: ${it.name}", Toast.LENGTH_SHORT).show()
+            val animalEntityIntent = Intent(this, RVDetailsActivity::class.java).apply {
+                putExtra("EXTRA_ANIMAL_KEY", it)
+            }
+            startActivity(animalEntityIntent)
+
         }
         list.adapter = adapter
         list.layoutManager = GridLayoutManager(this, 2)
