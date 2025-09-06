@@ -20,21 +20,25 @@
                 android:id="@+id/ivAnimal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/img_android"
+                android:scaleType="centerCrop"
                 android:layout_width="100dp"
                 android:layout_height="100dp"/>
 
             <TextView
                 android:id="@+id/tvTitle"
-                android:text="Titulo del primer TextView"
+                android:text="@string/title_label"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ivAnimal"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/bernier_shade_regular"
+                android:textColor="@color/blue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/tvDescription"
+                style="@style/GreenTextView"
                 app:layout_constraintStart_toEndOf="@id/ivAnimal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

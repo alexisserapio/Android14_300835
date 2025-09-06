@@ -26,16 +26,16 @@ class RecyclerViewActivity : AppCompatActivity() {
         val list = findViewById<RecyclerView>(R.id.list)
 
         //Colección de datos
-        val data = listOf(AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Tigre", "Naranja", ""),
-            AnimalEntity("Perro", "Café", ""),
-            AnimalEntity("Gato", "Blanquito", ""),
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Leon", "Amarillo", "")
+        val data = listOf(AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Tigre", "Naranja", "https://imgs.search.brave.com/Utj-vReJOC2HtRkCvCc0c4XOdvWIeM4A3Rb2bTj6WD0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxUm00NitLNzBM/LmpwZw"),
+            AnimalEntity("Perro", "Café", "https://imgs.search.brave.com/5x3RDIIrGIucFUsFqyHgoaZzjo-oDkj9lAuP88WuWGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIw/NTIwMjgyL3Bob3Rv/L2RhY2hzaHVuZC1k/b2cuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPTI2VVdlMDlT/aWRYejdKZFlQa3Z3/aHYwV2RSLURITHJz/b1ZfR19KcWQ2NWs9"),
+            AnimalEntity("Gato", "Blanquito", "https://imgs.search.brave.com/63R02lNntAi0f6qxfOx17YAes-JjCUqn8nUKcLAQR88/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90by1ncmF0aXMv/cHJpbWVyLXBsYW5v/LWxpbmRvLWdhdG8t/ZG9tZXN0aWNvLWJs/YW5jby1ncmlzXzE4/MTYyNC0xODc2MS5q/cGc_c2VtdD1haXNf/aXRlbXNfYm9vc3Rl/ZCZ3PTc0MA"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon", "Amarillo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
             )
 
         val adapter = AnimalAdapter(data)
@@ -48,7 +48,7 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         }
         list.adapter = adapter
-        list.layoutManager = GridLayoutManager(this, 2)
+        list.layoutManager = GridLayoutManager(this, 1)
        //list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
 }

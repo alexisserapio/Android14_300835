@@ -9,6 +9,7 @@ import androidx.appcompat.view.menu.ExpandedMenuView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android14.R
+import com.squareup.picasso.Picasso
 
 class AnimalAdapter(val list : List<AnimalEntity>) : RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>(){
 
@@ -23,6 +24,11 @@ class AnimalAdapter(val list : List<AnimalEntity>) : RecyclerView.Adapter<Animal
         fun render(animalEntity: AnimalEntity, onItemSelected:((AnimalEntity) -> Unit)? = null){
             tvTitle.text = animalEntity.name
             tvDescription.text = animalEntity.color
+            Picasso.get().load(animalEntity.image)
+                .placeholder(R.drawable.img_placeholder)
+                .error(R.drawable.outline_delete_24)
+                .into(ivAnimal)
+
             cardAnimal.setOnClickListener {
                 onItemSelected?.invoke(animalEntity)
             }

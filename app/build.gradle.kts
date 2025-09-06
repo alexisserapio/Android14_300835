@@ -57,6 +57,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.picasso)
 
     // Compose
     implementation("androidx.compose.ui:ui:1.7.0")

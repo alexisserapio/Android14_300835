@@ -5,5 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="GreenTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/myAddedColor</item>
+        <item name="android:fontFamily">@font/bernier_shade_regular</item>
+        <!--<item name="android:textSize"></item>-->
+    </style>
+
     <style name="Theme.Android14" parent="Base.Theme.Android14" />
 </resources>

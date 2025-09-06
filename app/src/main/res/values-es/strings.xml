@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Español 1</string>
+    <string name="title_label">Titulo del primer TextView</string>
+    <string name="label_subtitle">Descripción del segundo TextView</string>
+</resources>
