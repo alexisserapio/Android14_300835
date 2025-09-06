@@ -10,11 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.android14.R
+import com.example.android14.databinding.ActivityFirstBinding
 import com.example.android14.practicas.explicitintent.Person
 import com.example.android14.practicas.explicitintent.SecondActivity
 
 class FirstBActivity : AppCompatActivity() {
+    //Para usar binding
 
+    private lateinit var binding: ActivityFirstBinding
 
     private val registerPerson = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
         if (result.resultCode == RESULT_OK){
@@ -30,16 +33,26 @@ class FirstBActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_first_bactivity)
+        //inflando binding
+        binding = ActivityFirstBinding.inflate(layoutInflater)
+        //setContentView(R.layout.activity_first_bactivity)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val btnOpenPerson = findViewById<Button>(R.id.btnOpenActivity)
+        //val btnOpenPerson = findViewById<Button>(R.id.btnOpenActivity)
+        binding.btnOpen
 
-        btnOpenPerson.setOnClickListener {
+        binding.tvTitle.text = getString(R.string.app_name)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.title = "Primer Activity"
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        binding.btnOpen.setOnClickListener {
 
             val extraBundle = Bundle().apply {
                 putBoolean("EXTRA_IS_MARRIED_KEY", false)
@@ -57,5 +70,24 @@ class FirstBActivity : AppCompatActivity() {
             //startActivity(secondIntent)
             registerPerson.launch(secondIntent)
         }
+
+        /*btnOpenPerson.setOnClickListener {
+
+            val extraBundle = Bundle().apply {
+                putBoolean("EXTRA_IS_MARRIED_KEY", false)
+                putString("EXTRA_SURNAME_KEY","Armenta")
+                putString("EXTRA_EMAIL_KEY","example@.com")
+
+            }
+
+            val secondIntent = Intent(this, SecondBActivity::class.java).apply {
+                putExtra("EXTRA_NAME_KEY", "Fabian")
+                putExtra("EXTRA_AGE_KEY",23)
+                putExtra("EXTRA_PHONE_KEY", "5578904569")
+                putExtra("EXTRA_BUNDLE_KEY", extraBundle)
+            }
+            //startActivity(secondIntent)
+            registerPerson.launch(secondIntent)
+        }*/
     }
 }

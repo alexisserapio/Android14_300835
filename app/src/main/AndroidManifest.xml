@@ -27,11 +27,6 @@
         <activity
             android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
 
         <activity
@@ -48,7 +43,13 @@
             android:exported="false" />
         <activity
             android:name=".practicainicial.FirstBActivity"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".practicainicial.ImplicitIntentBrowserActivity"
             android:exported="true" />

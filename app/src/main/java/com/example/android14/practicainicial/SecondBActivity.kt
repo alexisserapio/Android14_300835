@@ -2,6 +2,7 @@ package com.example.android14.practicainicial
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,10 @@ class SecondBActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.title = "Primer Activity"
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val tvB = findViewById<TextView>(R.id.tvB)
         var infoB = ""
@@ -54,6 +59,14 @@ class SecondBActivity : AppCompatActivity() {
             finish()
         }
 
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
